@@ -4201,7 +4201,7 @@ img {
   background: var(--btn-hover-color);
 }
 #vcomment textarea {
-  background: url("https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/comment_bg.png") 100% 100% no-repeat;
+  background: url("https://view.moezx.cc/images/2018/03/24/comment-bg.png") 100% 100% no-repeat;
 }
 #vcomment .vimg {
   -webkit-transition: all 0.3s;

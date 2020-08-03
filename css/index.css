@@ -609,6 +609,9 @@ canvas:not(#ribbon-canvas),
   -ms-animation: sidebarItem 0.8 s;
   animation: sidebarItem 0.8 s;
 }
+#toggle-sidebar {
+  bottom: 100px;
+}
 @-moz-keyframes scroll-down-effect {
   0% {
     top: 0;

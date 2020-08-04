@@ -21,6 +21,7 @@
       <tags>
         <tag>蓝桥杯</tag>
         <tag>算法</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -29,7 +30,7 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="资源限制"><a href="#资源限制" class="headerlink" title="资源限制"></a>资源限制</h3><p>时间限制：1.0s 内存限制：256.0MB</p>
 <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>《审美的历程》课上有n位学生，帅老师展示了m幅画，其中有些是梵高的作品，另外的都出自五岁小朋友之手。老师请同学们分辨哪些画的作者是梵高，但是老师自己并没有答案，因为这些画看上去都像是小朋友画的……老师只想知道，有多少对同学给出的答案完全相反，这样他就可以用这个数据去揭穿披着皇帝新衣的抽象艺术了（支持帅老师^_^）。</p>
 <p>答案完全相反是指对每一幅画的判断都相反。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行两个数n和m，表示学生数和图画数；<br>接下来是一个n*m的01矩阵A：<br>    如果a<sub>ij</sub>=0，表示学生i觉得第j幅画是小朋友画的；<br>    如果a<sub>ij</sub>=1，表示学生i觉得第j幅画是梵高画的。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行两个数n和m，表示学生数和图画数；<br>接下来是一个n*m的01矩阵A：<br>        如果a<sub>ij</sub>=0，表示学生i觉得第j幅画是小朋友画的；<br>        如果a<sub>ij</sub>=1，表示学生i觉得第j幅画是梵高画的。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个数ans：表示有多少对同学的答案完全相反。</p>
 <h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><p>3    2<br>1    0<br>0    1<br>1    0</p>
 <h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><p>2</p>
@@ -47,6 +48,7 @@
       <tags>
         <tag>蓝桥杯</tag>
         <tag>算法</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -69,6 +71,7 @@
       <tags>
         <tag>蓝桥杯</tag>
         <tag>算法</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
 </search>

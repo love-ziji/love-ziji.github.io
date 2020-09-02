@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day</title>
+</head>
+<body>
+    <div id="num1"></div>
+    <script>
+        const oldDay = new Date('2019-11-11');
+        const nowDay = new Date();
+        let n=parseInt((nowDay.getTime()-oldDay.getTime())/(24*60*60*1000));
+        document.getElementById("num1").innerHTML=n;
+    </script>
+</body>
+</html>

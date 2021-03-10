@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.pzijigame.com/"/>
-  <updated>2021-03-10T06:38:55.720Z</updated>
+  <updated>2021-03-10T07:30:05.373Z</updated>
   <id>http://www.pzijigame.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蓝桥杯 省赛 C/C++ B组 历年真题及解答</title>
+    <link href="http://www.pzijigame.com/2021-03-10-LANQIAO.html"/>
+    <id>http://www.pzijigame.com/2021-03-10-LANQIAO.html</id>
+    <published>2021-03-10T07:15:10.000Z</published>
+    <updated>2021-03-10T07:30:05.373Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2012年第三届"><a href="#2012年第三届" class="headerlink" title="2012年第三届"></a>2012年第三届</h2><h4 id="01-微生物增殖"><a href="#01-微生物增殖" class="headerlink" title="01 微生物增殖"></a>01 微生物增殖</h4><h4 id="02-古堡算式"><a href="#02-古堡算式" class="headerlink" title="02 古堡算式"></a><a href="https://blog.pzijigame.com/2021-03-09-LANQIAO201202.html">02 古堡算式</a></h4><h4 id="03-比酒量"><a href="#03-比酒量" class="headerlink" title="03 比酒量"></a><a href="https://blog.pzijigame.com/2021-03-10-LANQIAO201203.html">03 比酒量</a></h4><h4 id="04-奇怪的比赛"><a href="#04-奇怪的比赛" class="headerlink" title="04 奇怪的比赛"></a><a href="https://blog.pzijigame.com/2021-03-10-LANQIAO201204.html">04 奇怪的比赛</a></h4><h4 id="08-密码发生器"><a href="#08-密码发生器" class="headerlink" title="08 密码发生器"></a><a href="https://blog.pzijigame.com/2021-03-10-LANQIAO201208.html">08 密码发生器</a></h4><h4 id="09-夺冠概率"><a href="#09-夺冠概率" class="headerlink" title="09 夺冠概率"></a><a href="https://blog.pzijigame.com/2021-03-10-LANQIAO201209.html">09 夺冠概率</a></h4><h4 id="10-取球游戏"><a href="#10-取球游戏" class="headerlink" title="10 取球游戏"></a><a href="https://blog.pzijigame.com/2021-03-10-LANQIAO201210.html">10 取球游戏</a></h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>蓝桥杯 2012年第三届省赛 C/C++ B组 10 取球游戏</title>
+    <link href="http://www.pzijigame.com/2021-03-10-LANQIAO201210.html"/>
+    <id>http://www.pzijigame.com/2021-03-10-LANQIAO201210.html</id>
+    <published>2021-03-10T06:47:26.000Z</published>
+    <updated>2021-03-10T07:16:03.029Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>今盒子里有n个小球，A、B两人轮流从盒中取球，每个人都可以看到另一个人取了多少个，也可以看到盒中还剩下多少个，并且两人都很聪明，不会做出错误的判断。<br>我们约定：<br>每个人从盒子中取出的球的数目必须是：1，3，7或者8个。<br>轮到某一方取球时不能弃权！<br>A先取球，然后双方交替取球，直到取完。<br>被迫拿到最后一个球的一方为负方（输方）<br>请编程确定出在双方都不判断失误的情况下，对于特定的初始球数，A是否能赢？<br>程序运行时，从标准输入获得数据，其格式如下：<br>先是一个整数n(n&lt;100)，表示接下来有n个整数。然后是n个整数，每个占一行（整数&lt;10000），表示初始球数。<br>程序则输出n行，表示A的输赢情况（输为0，赢为1）。<br>例如，用户输入：<br>4<br>1<br>2<br>10<br>18<br>则程序应该输出：<br>0<br>1<br>1<br>0</p><h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>使用动态规划算法，先确定盒子里有1至8个小球时A的输赢情况，使用状态转移方程：<br>a[i] = (a[i-1] &amp;&amp; a[i-3] &amp;&amp; a[i-7] &amp;&amp; a[i-8]) ? 0 : 1<br>即可确定小球个数大于8时A的输赢情况<br>如小球个数等于9时，A有4种取法：<br>1、取1个小球 =&gt; B取时盒子里有8个小球 =&gt; a[8]=1 =&gt; B赢A输<br>2、取3个小球 =&gt; B取时盒子里有6个小球 =&gt; a[6]=1 =&gt; B赢A输<br>3、取7个小球 =&gt; B取时盒子里有2个小球 =&gt; a[2]=1 =&gt; B赢A输<br>4、取8个小球 =&gt; B取时盒子里有1个小球 =&gt; a[1]=0 =&gt; B输A赢<br>4种情况中保证至少1种情况A赢，则A赢</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">10000</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>&#125;; <span class="comment">//a[0]可为任意值</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">9</span>;i&lt;<span class="number">10000</span>;i++) &#123;</span><br><span class="line">        a[i]=(a[i<span class="number">-1</span>] &amp;&amp; a[i<span class="number">-3</span>] &amp;&amp; a[i<span class="number">-7</span>] &amp;&amp; a[i<span class="number">-8</span>]) ? <span class="number">0</span> : <span class="number">1</span>; <span class="comment">//状态转移方程 </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">while</span>(n--) &#123;</span><br><span class="line">        <span class="keyword">int</span> num;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;num;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;a[num]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="蓝桥杯" scheme="http://www.pzijigame.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    
+      <category term="动态规划" scheme="http://www.pzijigame.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>蓝桥杯 2012年第三届省赛 C/C++ B组 09 夺冠概率</title>
